@@ -192,7 +192,7 @@ const utilObserverConfig = { childList: true, subtree: true };
 const utilObserver = new MutationObserver(utilHandleMutations);
 
 // Start observing the target node for configured mutations
-utilObserver.observe(document.body, utilObserverConfig);
+utilObserver.observe(document.documentElement, utilObserverConfig);
 
 // Add the attribute to all existing elements
 document.querySelectorAll("*").forEach((element) => {
