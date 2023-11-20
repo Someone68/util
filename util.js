@@ -38,7 +38,7 @@ function s(sel, num) {
 
 function makeElement(type, innerHTML, parent, attributes, classList, id) {
 	let element = document.createElement(type);
-	element.innerHTML = innerHTML;
+	if (innerHTML) element.innerHTML = innerHTML;
 	if (attributes) {
 		attributes.forEach((attribute) => {
 			element.setAttribute(
@@ -108,13 +108,15 @@ function randomCall(func, min, max) {
 	return stopRandomCalls;
 }
 
-function componentToHex(c) {
+function utilComponentToHex(c) {
 	var hex = c.toString(16);
 	return hex.length == 1 ? "0" + hex : hex;
 }
 
 function rgbToHex(r, g, b) {
-	return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
+	return (
+		"#" + utilComponentToHex(r) + utilComponentToHex(g) + utilComponentToHex(b)
+	);
 }
 
 function hexToRgb(hex) {
