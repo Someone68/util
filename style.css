@@ -1,0 +1,35 @@
+body {
+	background: #1f2f3e;
+	color: white;
+}
+
+pre.title {
+	text-align: center;
+	margin: auto;
+	font-size: 20px;
+}
+
+.explain {
+	display: none;
+}
+
+button {
+	cursor: pointer;
+	text-align: center;
+	padding: 12px;
+	font-size: 16px;
+	color: white;
+	background: rgb(9, 0, 139);
+	outline: none;
+	font-family: monospace;
+	border: none;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.center {
+	text-align: center;
+	margin: auto;
+}

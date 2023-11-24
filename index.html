@@ -4,17 +4,30 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
 		<title>util</title>
-		<link rel="stylesheet" href="util.css" />
+		<link rel="stylesheet" href="style.css" />
 	</head>
 
 	<body>
-		<pre><code>
-  &lt;!-------------------------------
-    Put in HTML &lt;head&gt; tag to use
-  --------------------------------&gt;
-  &lt;script src="https://ut1l.pages.dev/util.js"&gt;&lt;/script&gt;
+		<pre class="title">
+        _    __   _ 
+       | |  /  | | |
+ _   _ | |_ `| | | |
+| | | || __| | | | |
+| |_| || |_ _| |_| |
+ \__,_| \__|\___/|_|
+-----------------------------------------------------
+		</pre
+		>
+		<button
+			onclick="s('.explain').style.display = 'block';this.remove();"
+			class="center"
+		>
+			Kill me with documentation
+		</button>
+		<pre class="explain"><code>
+a lightweight javascript utility library
 
-||== How to use ==||
+==|| How to use ||==
 // [] = optional, || = can be a different value, will be explained in comment.
 1. randomInt([min], max) // random integer between min and max. if min is not provided, it will generate a random number from 0 to max.
 2. randomFloat([min], max, [decimalPlaces]) // random float between min and max, with optional decimalPlaces rounding. if min is not provided, it will generate a random number from 0 to max.
