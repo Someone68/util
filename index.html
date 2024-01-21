@@ -34,7 +34,7 @@ attach https://ut1l.pages.dev/util.js to your html file using a script tag.
 2. randomFloat([min], max, [decimalPlaces]) // random float between min and max, with optional decimalPlaces rounding. if min is not provided, it will generate a random number from 0 to max.
 3. random() // same as Math.random()
 4. randomCall(func, min, max) // call func() at random intervals between min and max
-5. s(selector, [num]) // smart document.querySelector(), if num is passed, returns the nth element
+5. [LEGACY] s(selector, [num]) // smart document.querySelector(), if num is passed, returns the nth element. Use _ instead, s is unsupported.
 6. qsall(selector, [func]) // smart document.querySelectorAll(), if func is passed, runs func on each element. you can have the optional parameters on that function which are the element and index.
 7. gebid(id) // get element by id
 8. makeElement(type, [innerHTML], [parent], [attributes], [classList], [id]) // create an element with optional parameters.
