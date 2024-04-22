@@ -36,6 +36,14 @@ function s(sel, num) {
   }
 }
 
+function find(sel, num) {
+  if (num) {
+    return convertElementToUtil(document.querySelectorAll(sel)[num - 1]);
+  } else {
+    return convertElementToUtil(document.querySelector(sel));
+  }
+}
+
 /*
 
 Example:
@@ -171,6 +179,8 @@ function convertElementToUtil(element) {
   element.detect = (listener, callback) => {
     element.addEventListener(listener, callback);
   };
+
+  return element;
 }
 
 function hide(elm) {
