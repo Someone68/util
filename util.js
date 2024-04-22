@@ -144,6 +144,35 @@ class UtilElementBuilder {
   }
 }
 
+function convertElementToUtil(element) {
+  element.css = (options) => {
+    if (typeof options !== "object") {
+      throw new Error("[UTIL] Could not assign css: options is not an object");
+    }
+
+    for (const property in options) {
+      const value = options[property];
+      element.style[property] = value;
+    }
+  };
+
+  element.detectCollision = (elementA, elementB) => {
+    const rectA = elementA.getBoundingClientRect();
+    const rectB = elementB.getBoundingClientRect();
+
+    return (
+      rectA.left < rectB.right &&
+      rectA.right > rectB.left &&
+      rectA.top < rectB.bottom &&
+      rectA.bottom > rectB.top
+    );
+  };
+
+  element.detect = (listener, callback) => {
+    element.addEventListener(listener, callback);
+  };
+}
+
 function hide(elm) {
   elm.style.display = "none";
 }
