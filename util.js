@@ -148,6 +148,16 @@ class UtilElementBuilder {
       );
     };
 
+    element.detect = (listener, callback) => {
+      element.addEventListener(listener, callback);
+    };
+  
+    element.clickRedir = (href) => {
+      element.addEventListener("click", () => {
+        location.href = href;
+      });
+    };
+
     return element;
   }
 }
