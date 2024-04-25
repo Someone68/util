@@ -134,6 +134,8 @@ class UtilElementBuilder {
         const value = options[property];
         element.style[property] = value;
       }
+
+      return element;
     };
 
     element.detectCollision = (elementA, elementB) => {
@@ -173,6 +175,8 @@ function convertElementToUtil(element) {
       const value = options[property];
       element.style[property] = value;
     }
+
+    return element;
   };
 
   element.detectCollision = (elementA, elementB) => {
