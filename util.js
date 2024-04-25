@@ -153,6 +153,7 @@ class UtilElementBuilder {
 }
 
 function convertElementToUtil(element) {
+  if (!element) return null;
   element.css = (options) => {
     if (typeof options !== "object") {
       throw new Error("[UTIL] Could not assign css: options is not an object");
