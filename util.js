@@ -109,7 +109,7 @@ class UtilElementBuilder {
     let element = document.createElement(this.type);
     if (this.innerhtml) element.innerHTML = this.innerhtml;
     if (this.classList) {
-      for (const item of classList) {
+      for (const item of this.classList) {
         element.classList.add(item);
       }
     }
@@ -153,7 +153,7 @@ class UtilElementBuilder {
     element.detect = (listener, callback) => {
       element.addEventListener(listener, callback);
     };
-  
+
     element.clickRedir = (href) => {
       element.addEventListener("click", () => {
         location.href = href;
