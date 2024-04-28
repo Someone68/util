@@ -138,6 +138,10 @@ class UtilElementBuilder {
       return element;
     };
 
+    element.getSelf = () => {
+      return element;
+    };
+
     element.detectCollision = (elementA, elementB) => {
       const rectA = elementA.getBoundingClientRect();
       const rectB = elementB.getBoundingClientRect();
