@@ -135,7 +135,7 @@ class UtilElementBuilder {
         element.style[property] = value;
       }
 
-      return element;
+      return convertElementToUtil(element);
     };
 
     element.getSelf = () => {
