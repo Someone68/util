@@ -44,6 +44,29 @@ function find(sel, num) {
   }
 }
 
+function makeElement(type, innerHTML, parent, attributes, classList, id) {
+  let element = document.createElement(type);
+  if (innerHTML) element.innerHTML = innerHTML;
+  if (attributes) {
+    attributes.forEach((attribute) => {
+      element.setAttribute(
+        Object.keys(attribute)[0],
+        attribute[Object.keys(attribute)[0]]
+      );
+    });
+  }
+  if (classList) {
+    classList.forEach((classs) => {
+      element.classList.add(classs);
+    });
+  }
+  if (id) {
+    element.id = id;
+  }
+  if (parent) parent.append(element);
+  return element;
+}
+
 /*
 
 Example:
